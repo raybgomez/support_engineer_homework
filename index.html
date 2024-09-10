@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Reportrr</title>
+</head>
+<body>
+<h1>Reportrr</h1>
+
+<!-- 1. Takes the value of a myShopifyDomain field as an input and
+  returns their optimization settings. -->
+<div class="report">
+    <h3>Optimization Settings</h3>
+    <div class="inputField">
+        <label for="myShopifyDomain">Enter Shopify Domain:</label>
+        <input type="text" id="myShopifyDomain">
+        <button onclick="getOptimizationSettings()">Submit</button>
+    </div>
+    <div class="reportOutput1"></div>
+</div>
+
+<!-- 2. Loops through all organizations and shows the date they were
+  created (DD/MM/YYYY), their status, and planName sorted by oldest to newest. -->
+
+  <div class="report">
+    <h3>List Organizations by Date Created</h3>
+    <button onclick="listOrganizationsByDate()">Show Organizations Oldest to Newest</button>
+    <div id="reportOutput2"></div>
+  </div>
+
+  <!-- 3. Returns the list of organizations whose status is cancelled. -->
+
+  <div class="report">
+    <h3>List Cancelled Organizations</h3>
+    <button onclick="listCancelledOrganizations()">Show Cancelled Organizations</button>
+    <div id="reportOutput3"></div>
+  </div>
+
+  <!-- 4. Takes the value of an orgName and returns the organization record in JSON format -->
+
+  <div class="report">
+    <h3>Get Organization Record</h3>
+    <div class="inputField">
+        <label for="organizationName">Enter Organization Name:</label>
+        <input type="text" id="organizationName">
+        <button onclick="getOrganizationRecordByName()">Submit</button>
+    </div>
+    <div id="reportOutput4"></div>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
