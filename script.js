@@ -84,12 +84,12 @@ const listCancelledOrganizations = () => {
 }
 
 const getOrganizationRecordByName = () => {
-    const orgName = document.getElementById('orgName').value;
+    const orgName = document.getElementById('organizationName').value;
     const organization = organizations.find(org => org.orgName.toLowerCase() === orgName.toLowerCase());
 
     const output = document.getElementById('reportOutput4');
     if (organization) {
-        output.innerHTML = `<pre>${JSON.stringify(organization)}</pre>`
+        output.innerHTML = `<pre>${JSON.stringify(organization, null, 2)}</pre>`
     } else {
         output.innerHTML = `<p>Not found</p>`
     }
