@@ -25,6 +25,20 @@ fetch('account_plan.csv')
         })
     });
 
+const formatDate = (createdDateStr) => {
+    const date = new Date(createdDateStr.createdDate);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = date.getFullYear();
+    const formattedDate = `${day}/${month}/${year}`;
+
+    return {
+        ...createdDateStr,
+        createdDate: formattedDate
+    }
+}
+
+
 const getOptimizationSettings = () => {
     const domainValue = document.getElementById('myShopifyDomain').value;
     const organization = organizations.find(org => org.myShopifyDomain.toLowerCase() === domainValue.toLowerCase());
@@ -35,4 +49,21 @@ const getOptimizationSettings = () => {
     } else {
         output.innerHTML = `<p>Not found</p>`
     }
+}
+
+const listOrganizationsByDate = () => {
+    const sortedList = account_plan.sort((a, b) => new Date(a.createdDate) - new Date(b.createdDate))
+        .map(formatDate);
+
+    const output = document.getElementById('reportOutput2');
+    let html = '<table border="1"><tr><th>Created Date</th><th>Plan Name</th><th>/Status</th></tr>'
+    sortedList.forEach(org => {
+        html += `<tr>
+        <td>${org.createdDate}</td>
+        <td>${org.planName}</td>
+        <td>${org.status}</td>
+        </tr>`;
+    });
+    html += '</table>';
+    output.innerHTML = html;
 }
