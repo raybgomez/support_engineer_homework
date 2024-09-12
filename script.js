@@ -82,3 +82,17 @@ const listCancelledOrganizations = () => {
         output.innerHTML = '<p>Not Found</p>';
     }
 }
+
+const getOrganizationRecordByName = () => {
+    const orgName = document.getElementById('orgName').value;
+    const organization = organizations.find(org => org.orgName.toLowerCase() === orgName.toLowerCase());
+
+    const output = document.getElementById('reportOutput4');
+    if (organization) {
+        output.innerHTML = `<pre>${JSON.stringify(organization)}</pre>`
+    } else {
+        output.innerHTML = `<p>Not found</p>`
+    }
+}
+
+// Check that the JSON stringify works
