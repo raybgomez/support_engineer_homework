@@ -38,7 +38,6 @@ const formatDate = (createdDateStr) => {
     }
 }
 
-
 const getOptimizationSettings = () => {
     const domainValue = document.getElementById('myShopifyDomain').value;
     const organization = organizations.find(org => org.myShopifyDomain.toLowerCase() === domainValue.toLowerCase());
@@ -66,4 +65,20 @@ const listOrganizationsByDate = () => {
     });
     html += '</table>';
     output.innerHTML = html;
+}
+
+const listCancelledOrganizations = () => {
+    const cancelledOrganizations = account_plan.filter(org => org.status === "CANCELLED").map(formatDate);
+
+    const output = document.getElementById('reportOutput3');
+    if (cancelledOrganizations.length > 0) {
+        let html = '<ul>';
+        cancelledOrganizations.forEach(org => {
+            html += `<li>${org.planName}, (Created Date: ${org.createdDate}, Status: ${org.status})</li>`;
+        });
+        html += '</ul>';
+        output.innerHTML = html;
+    } else {
+        output.innerHTML = '<p>Not Found</p>';
+    }
 }
