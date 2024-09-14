@@ -65,6 +65,7 @@ Click on the above live demo link.
 - **Step 4**. Download the latest version of Node.js at nodejs.org.
 - **Step 5**. Open the terminal in your VSCode and type in "node query.js".
 - **Step 6**. You will see the answers to all four SQL questions.
+- **Note**. You will not be able to see "mydatabase.db" file with the default text editor in VSCode. You must install the SQLite extension. Then type in VSCode's search box ">SQLite: Open Database" and select mydatabase.db. SQLite Explorer will show up at the bottom left corner.
 
 
 ## Contributing
