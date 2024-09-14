@@ -22,6 +22,7 @@ This project was completed as a take-home assignment for Smartrr. The goal of th
 ## Built With 
 
 - JavaScript
+- NodeJS
 - SQLite
 - HTML5
 - CSS3
