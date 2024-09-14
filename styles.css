@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.report {
+    margin-bottom: 20px;
+}
+
+.input-field {
+    margin-bottom: 10px;
+}
