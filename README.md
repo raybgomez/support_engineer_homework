@@ -1,17 +1,9 @@
 # Support Engineer Homework
+### This is a take-home coding assignment for the Support Engineer role at Smartrr.
 
-1. Fork this repository.
-2. Add `smartrr-hello` as a collaborator to your repository.
-3. Use the [test data](https://docs.google.com/spreadsheets/d/1uyDXhb3T3-LVywTvpH1ixWbz6if7vUaUQC6YHcNm-wY/edit?usp=sharing) to answer the questions below. The test data is in CSV form in two tabs. Each tab represents a table:
-   - organization
-   - account 
-4. Add all SQL and JavaScript files to your fork.
-5. Write a README explaining how to run your application.
-6. Push up your submission and let us know where to find it.
+This project was completed as a take-home assignment for Smartrr. The goal of the assignment was to answer the following questions using JS and SQL:
 
 ## Questions:
-
-Use JS and SQL to answer the following questions.
 
 **JavaScript**
 - Write a JavaScript application. The app can be a CLI or web-based app. It should provide a user with the options to run four reports:
@@ -26,3 +18,54 @@ Use JS and SQL to answer the following questions.
   - How many organizations have more than one account plan?
   - List all organizations that have only one account plan.
   - List all organizations that have the PASSWORDLESS feature set to true.
+
+## Built With 
+
+- JavaScript
+- SQLite
+- HTML5
+- CSS3
+
+## Prerequisites
+
+You will need a web browser to view the JavaScript portion of this project. No set up required. Works best on:
+
+- Firefox
+- Google Chrome
+- Safari
+
+For the SQL queries, you will need to have the following installed:
+
+- SQLite
+- Node.js
+- CSV-parser
+
+## Live Demo
+
+<https://raybgomez.github.io/Weather-project/>
+
+Deployed on [GitHub Pages](https://pages.github.com/) 
+
+### Usage
+
+**JavaScript Web-based App**
+
+Click on the above live demo link. 
+- **Optimization Settings**. In the input field, type in the Shopify domain and click submit.
+- **List Organizations by Name**. Click on the button "Show Organizations Oldest to Newest".
+- **List Cancelled Organizations**. Click on the button "Show Cancelled Organizations".
+- **Get Organization Record**. In the input field, type in the Organization name and click submit.
+
+**SQL Queries**
+
+- **Step 1**. You will find the SQL queries in the query.js file.
+- **Step 2**. Open query.js in VSCode.
+- **Step 3**. Install SQLite and csv parser by typing npm install sqlite3 csv-parser.
+- **Step 4**. Download the latest version of Node.js at nodejs.org.
+- **Step 5**. Open the terminal in your VSCode and type in "node query.js".
+- **Step 6**. You will see the answers to all four SQL questions.
+
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome!
