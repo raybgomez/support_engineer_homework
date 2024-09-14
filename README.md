@@ -42,7 +42,7 @@ For the SQL queries, you will need to have the following installed:
 
 ## Live Demo
 
-<https://raybgomez.github.io/Weather-project/>
+<https://raybgomez.github.io/support_engineer_homework/>
 
 Deployed on [GitHub Pages](https://pages.github.com/) 
 
